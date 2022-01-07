@@ -13,7 +13,9 @@ First, using a histogram of the dependent variable values to visually represent 
 In Ames, Iowa, it appears that the median house for $163,000 but the top 25% of sales sell for $214,000 or higher with a max of $755,000. With a standard deviation of $79,442, the top quartile contains observations outside of the 3 standard deviation rule indicating we may have outliers. 
 
 ## Missing data and outliers
-#### Missing data
+### Missing data
+I first find the number of observations (1,460 in this case) and then determine which independent variables are missing values. There are 19 independent variables missing data with the total amount missing ranging from 1 to 1,453. Examining the number of missing values for each observation, I find 87% of the observations are missing 3 to 4 values. The most likely culprits are the variables Alley, FireplaceQu, PoolQC, Fence, and MiscFeature. Depending on what the value optons are for these categorical variables or if there is a related variable, the missing values may be able to be recoded as does not exist rather than dropping observations or these variables. For example, there are only 7 non-null values for PoolQC. However, we don't have any missing values for PoolArea and this variable includes a 0 value as an option. Thus, using PoolArea, we may be able to impute the 1,453 missing values for PoolQC.
 
+By plotting histograms of the 19 dependent variables with missing data, we can see that for categorical variables, there appears that most of the variables don't have an None, or Not Applicable option. Further work is needed but there is a potential that most of these missing values can be recoded as a None or Not Applicable value.
 
-#### Outliers
+### Outliers
