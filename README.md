@@ -19,3 +19,5 @@ I first find the number of observations (1,460 in this case) and then determine 
 By plotting histograms of the 19 dependent variables with missing data, we can see that for categorical variables, there appears that most of the variables don't have an None, or Not Applicable option. Further work is needed but there is a potential that most of these missing values can be recoded as a None or Not Applicable value.
 
 ### Outliers
+box plot outliers due to have majority 0 in as a value, most dependent variables have at least a couple outliers at a minimum and these are usually non-continous variables.
+scatter plot, real interest due to the variable of interest.
