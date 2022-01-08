@@ -32,6 +32,8 @@ Determining the best three potential predictors is not as simple as selecting th
 FullBath but I also don't choose that independent variable since it has a correlation of .63 with GrLivArea. Instead, I choose YearBuilt as the last best potential predictor since it is next on the list of correlation with SalePrice and is not correlated with GrLivArea (.2) meaning it is explaining different variation in the dependent variable than GrLivArea. 
 
 ## Feature creation
+Domain knowledge can be an asset when thinking about feature creation. In this case, most home buyers think of baths as a single variable. For example, a house with 3 and a half baths is throught of as 3.5 baths total, not 1 full bath in the basement, 1 full bath on the first floor, half bath on the first floor, and full bath on the second floor. I create a new variable, Baths, which is a sum of the four bath variables in the dataset. I then run a correlation matrix of SalePrice, Baths, and the four variables that consist of Bath. I find that Baths has a correlation of .61 with SalePrice, which is better than any of the four variables on their own.
 
-# Create a single feature that captures all the bathrooms in a house. Most home buyers think of 2.5 baths not 2 full baths and 1 half bath.
-# Create a feature with all square footage in the house plus garage. Most buyers look at aggregate square footage.
+I additionally create a variable called TotSF (total square feet). The dataset has the house square footage broken into three variables, basement, living area (above grade), and garage area. By combining these three variables into TotSF and running a correlation matrix, I find TotSF has a correlation of .81 with SalePrice which is better than any of the three variables on their own. 
+
+## Min-max and standard scaling
